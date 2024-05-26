@@ -31,6 +31,21 @@ header > h1 {
     color: var(--color-gray);
 }
 
+.menu {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+@media (max-width:700px) {
+    .menu{
+        display:block;
+    }
+    header > nav {
+        display: none;
+    }
+}
+
 nav > ul {
     display: flex;
     list-style: none;
@@ -155,8 +170,6 @@ main {
 }
 
 footer {
-    display: flex;
-    justify-content:space-around;
     background-color: var(--color-white);;
     text-align: center;
     gap: 20px;
@@ -164,15 +177,16 @@ footer {
 
 footer > nav{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 footer > nav > ul {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content:space-around;
+    align-items: center;
     list-style: none;
-    text-align: left;
+    text-align: center;
     gap:10px;
     margin:20px;
 }
